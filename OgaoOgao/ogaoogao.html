@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+  <!-- Button that shows an alert -->
+    <button onclick="sayHello()">Hello!</button>
+    <br><br>
+
+    <!-- Text input and button -->
+    <input type="text" id="userInput" placeholder="Type something">
+    <button onclick="showInput()">Show Input</button>
+    <p id="output"></p>
+
+    <!-- Paragraph that changes color on hover -->
+    <p id="hoverText">Hover over me!</p>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        function sayHello() {
+            alert("Hello, everyone!");
+        }
+
+        function showInput() {
+            let text = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = text;
+        }
+
+        document.getElementById("hoverText").onmouseover = function () {
+            this.style.color = "blue";
+        };
+
+        document.getElementById("hoverText").onmouseout = function () {
+            this.style.color = "black";
+        };
+    </script>
